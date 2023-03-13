@@ -90,6 +90,7 @@
 
 %%%%%%%%%%%%%%%%%%%% Zitatbibliothek einbinden %%%%%%%%%%%%%%%%%%%%%
 \addbibresource{literatur/literatur.bib}
+\addbibresource{literatur/tobias.bib}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% PDF-Einstellungen %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -138,16 +139,16 @@
   %%%%%%%%%%%%%%%%%%% Einführung und Verzeichnisse %%%%%%%%%%%%%%%%%%%
   \pagenumbering{Roman}
 
-  \input{pages/titel}
-  % \input{pages/sperrvermerk}
-  \input{pages/selbststaendigkeitserklaerung}
-  \input{pages/abstract}
-  \input{pages/inhaltsverzeichnis}
-  \input{pages/abkuerzungsverzeichnis}
-  \input{pages/abbildungsverzeichnis}
-  \input{pages/tabellenverzeichnis}
-  \input{pages/listingsverzeichnis}
-  % \input{pages/vorwort}
+  \include{pages/titel}
+  % \include{pages/sperrvermerk}
+  \include{pages/selbststaendigkeitserklaerung}
+  \include{pages/abstract}
+  \include{pages/inhaltsverzeichnis}
+  \include{pages/abkuerzungsverzeichnis}
+  \include{pages/abbildungsverzeichnis}
+  \include{pages/tabellenverzeichnis}
+  \include{pages/listingsverzeichnis}
+  % \include{pages/vorwort}
 
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kapitel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -158,10 +159,11 @@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%%%                   EIGENE KAPITEL EINFÜGEN                  %%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \input{chapter/Einleitung}
+  \include{chapter/Einleitung}
+  \include{chapter/Anforderungskonflikte1}
 
   %%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%
-  \input{pages/literaturverzeichnis}
+  \include{pages/literaturverzeichnis}
 
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anhang %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -170,5 +172,5 @@
   \renewcommand{\thelstlisting}{\Alph{section}.\arabic{lstlisting}}
   \pagenumbering{Alph}
 
-  \input{pages/anhang}
+  \include{pages/anhang}
 \end{document}
