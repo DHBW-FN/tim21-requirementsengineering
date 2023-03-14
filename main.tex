@@ -24,6 +24,7 @@
 \usepackage[T1]{fontenc}													                                    % Umlaute auch richtig ausgeben
 \usepackage{newtxtext,newtxmath}                                                      % Font = Times New Roman
 \usepackage{hyperref}
+\usepackage{xr-hyper}
 \usepackage[nottoc]{tocbibind}
 \usepackage{fancyhdr}
 \usepackage{setspace}
@@ -90,6 +91,7 @@
 
 %%%%%%%%%%%%%%%%%%%% Zitatbibliothek einbinden %%%%%%%%%%%%%%%%%%%%%
 \addbibresource{literatur/literatur.bib}
+\addbibresource{literatur/Noel.bib}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% PDF-Einstellungen %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -159,6 +161,8 @@
   %%%%                   EIGENE KAPITEL EINFÜGEN                  %%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \input{chapter/Einleitung}
+  \include{chapter/EPK}
+
 
   %%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%
   \input{pages/literaturverzeichnis}
