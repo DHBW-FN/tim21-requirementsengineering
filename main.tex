@@ -93,6 +93,8 @@
 \addbibresource{literatur/Folien.bib}
 \addbibresource{literatur/Norm.bib}
 \addbibresource{literatur/Philipp.bib}
+\addbibresource{literatur/tobias.bib}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%% PDF-Einstellungen %%%%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{
@@ -140,16 +142,16 @@
   %%%%%%%%%%%%%%%%%%% Einführung und Verzeichnisse %%%%%%%%%%%%%%%%%%%
   \pagenumbering{Roman}
 
-  \input{pages/titel}
-  % \input{pages/sperrvermerk}
-  \input{pages/selbststaendigkeitserklaerung}
-  \input{pages/abstract}
-  \input{pages/inhaltsverzeichnis}
-  \input{pages/abkuerzungsverzeichnis}
-  \input{pages/abbildungsverzeichnis}
-  \input{pages/tabellenverzeichnis}
-  \input{pages/listingsverzeichnis}
-  % \input{pages/vorwort}
+  \include{pages/titel}
+  % \include{pages/sperrvermerk}
+  \include{pages/selbststaendigkeitserklaerung}
+  \include{pages/abstract}
+  \include{pages/inhaltsverzeichnis}
+  \include{pages/abkuerzungsverzeichnis}
+  \include{pages/abbildungsverzeichnis}
+  \include{pages/tabellenverzeichnis}
+  \include{pages/listingsverzeichnis}
+  % \include{pages/vorwort}
 
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kapitel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -160,14 +162,15 @@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%%%                   EIGENE KAPITEL EINFÜGEN                  %%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \input{chapter/Einleitung}
-  \input{chapter/Toolauswahl1}
-  \input{chapter/Qualitaetssicherung1}
-  \input{chapter/Stakeholderanalyse1}
-  \input{chapter/Stakeholderanalyse2}
+  \include{chapter/Einleitung}
+  \include{chapter/Toolauswahl1}
+  \include{chapter/Qualitaetssicherung1}
+  \include{chapter/Anforderungskonflikte1}
+  \include{chapter/Stakeholderanalyse1}
+  \include{chapter/Stakeholderanalyse2}
 
   %%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%
-  \input{pages/literaturverzeichnis}
+  \include{pages/literaturverzeichnis}
 
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anhang %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -176,5 +179,5 @@
   \renewcommand{\thelstlisting}{\Alph{section}.\arabic{lstlisting}}
   \pagenumbering{Alph}
 
-  \input{pages/anhang}
+  \include{pages/anhang}
 \end{document}
