@@ -47,6 +47,7 @@
 \usepackage[nohyperlinks, printonlyused, withpage]{acronym}                           % Abkürzungen
 \usepackage{dirtree}                                                                  % Ordnerstruktur (z.B. für Anhang)
 \usepackage{pdfpages}                                                                 % PDFs einbinden
+\usepackage{float}                                                                    % Abbildungen und Tabellen in Text einbinden
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,7 +174,6 @@
   \include{chapter/Stakeholderanalyse1}
   \include{chapter/EPK}
   \include{chapter/Kano_Model}
-  \include{chapter/Anforderungskonflikte1}
   \include{chapter/Stakeholderanalyse2}
   \include{chapter/Requirements}
 
@@ -187,7 +187,7 @@
   \renewcommand{\thetable}{\Alph{section}.\arabic{table}}
   \renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
   \renewcommand{\thelstlisting}{\Alph{section}.\arabic{lstlisting}}
-  \pagenumbering{Alph}
+  \pagenumbering{arabic}
 
   \include{pages/anhang}
 \end{document}
