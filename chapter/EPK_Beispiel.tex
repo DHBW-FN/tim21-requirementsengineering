@@ -1,0 +1,39 @@
+\subsection{Prozessmodellierung}\label{subsec:prozessmodelle}
+Um das Verständnis für den gegebenen Use-Case und die darauf basierende Anforderungsanalyse zu steigern soll nun einer der
+mithilfe eines EPK-Modells dargestellten Prozesse beispielhaft näher erläutert werden.
+Zusätzlich soll erklärt werden, inwiefern ein solches Modell den Vorgang der Erhebung und Definition von Anforderungen
+unterstützt.
+Bei dem Prozess infrage handelt es sich um den in~\nameref{fig:epk_search} dargestellten Prozess zum Finden und Abspielen
+eines speziellen Films.
+
+\subsubsection{Prozessbeschreibung}\label{subsubsec:prozessbeschreibung}
+Der Prozess startet mit der Ankunft des Nutzers auf der Startseite der Anwendung.
+Hier soll er die Auswahl haben nach einem bestimmten Film zu suchen oder einen Film aus den ihm vorgeschlagenen Filmen
+auszuwählen und zu starten.
+Entscheidet er sich für Letzteres, so wird der ausgewählte Film gestartet und der Prozess endet.
+Entscheidet er sich hingegen für die Suche nach einem bestimmten Film, so kann er diese durchführen und erhält eines von
+zwei Ergebnissen.
+Wird der Film in der Datenbank gefunden, soll er dem User angezeigt werden.
+Dieser hat dann wiederum die Wahl auf die Startseite zurückzukehren (Prozess beginnt von Neuem), den Film abzuspielen
+(Prozess endet) oder einen anderen Film zu suchen (letzter Prozessschritt wird wiederholt).
+Wird der Film nicht gefunden, soll der Nutzer informiert werden, dass der Film nicht vorhanden ist und automatisch auf die
+Startseite zurückgeleitet werden.
+
+\subsubsection{Nutzen für die Anforderungserhebung}\label{subsubsec:nutzen}
+Anhand eines solchen sehr simplen Prozessmodells können sehr schnell und einfach erste grobe Anforderungen erkannt werden,
+die im weiteren Verlauf der Anforderungsanalyse weiter ausspezifiziert werden können.
+Dabei dienen sowohl Zustände als auch Ereignisse als Quelle.
+Aus Zuständen lassen sich beispielsweise Anforderungen an die Benutzeroberfläche ableiten oder Outputs von Ereignissen
+erkennen.
+In diesem Fall abgeleitet werden, dass die Anwendung eine Startseite braucht, auf der der Nutzer nach dem Login ankommt.
+Außerdem kann eine Suche nach einem Film entweder erfolgreich oder erfolglos sein, das heißt es muss eine entsprechende
+Reaktion für beide Fälle geben.
+Anhand von Ereignissen hingegen lassen sich Anforderungen im Hinblick auf Interaktionen des Users mit dem System oder
+automatisch ablaufenden Funktionen des Systems selbst ableiten.
+So kann aus den Ereignissen in diesem Prozessmodell abgeleitet werden, dass dem Nutzer auf der Startseite einige Filme
+vorgeschlagen werden sollen, die er dann direkt starten können soll.
+Zudem soll es möglich sein nach Filmen zu suchen, wofür ein Input Feld zur Verfügung stehen muss.
+Wichtig ist im Umgang mit solchen Prozessmodellen zu beachten, dass die daraus abgeleiteten Anforderungen häufig noch zu
+ungenau formuliert sind, um sie direkt in den Anforderungskatalog mit aufzunehmen.
+Zusätzlich können aus den Prozessmodellen nur sehr selten nicht-funktionale Requirements abgeleitet werden.
+Aus diesen Gründen sollte die Verwendung dieser Modelle unbedingt durch die Anwendung weiterer Methoden ergänzt werden.
