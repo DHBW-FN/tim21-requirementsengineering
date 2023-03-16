@@ -14,6 +14,7 @@ Die Anforderungen sind außerdem nicht nach Priorität oder den Kano-Kategorien 
 Template vorgegebenen Hierarchie.
 Die Unterscheidung zwischen Kann- und Muss-Anforderungen erfolgt implizit anhand der Einordnung in die Kano-Kategorien und
 ist wie folgt aufgeteilt:
+
 \begin{itemize}
     \item \textbf{Muss-Anforderungen:} Basisfaktoren (Threshold), Leistungsfaktoren (Performance)
     \item \textbf{Kann-Anforderungen:} Begeisterungsfaktoren (Excitement), Gleichgültige Qualitäten (Indifferent),
@@ -26,19 +27,54 @@ gelöst (siehe~\nameref{subsubsec:conflicts}) und sind damit nicht mehr ersichtl
 \subsubsection{Konflikte zwischen Anforderungen}\label{subsubsec:conflicts}
 Während der Erstellung des Requirements-Katalogs kam es zu einigen Konflikten zwischen Anforderungen, deren Lösungen im Folgenden
 fachgerecht beschrieben werden sollen.
-Zentral hierfür ist die bereits gezeigte Matrix der Konsolidierungstechniken (siehe~\nameref{fig:konsolidierungstechniken}).
+Zentral hierfür ist die in~\nameref{subsubsec:loesen} erläuterte Reihenfolge der Widerspruchsauflösung und die bereits
+gezeigte Matrix der Konsolidierungstechniken (siehe~\nameref{fig:konsolidierungstechniken}).
 
-\paragraph{Verschiedene Abonnements}
-Ursprünglich war geplant eine Anwendung zu entwickeln, welche nur ein mögliches Abonnement anbietet.
-Nach der Kategorisierung der Anforderungen nach dem Kano-Modell durch die verschiedenen Stakeholder wurden allerdings
-große Unterschiede zwischen den Basisfaktoren und den Leistungsfaktoren festgestellt.
-Aufgrund der vielen verschiedenen Meinungen, der geplanten langen Lebensdauer des Ergebnisses und da dieser Konflikt die
-Sachebene betrifft, wurde unter Anwendung der Variantenbildung entschieden mehrere Abonnements anzubieten.
+\paragraph{Ungenaue Anforderungen an die Performance (Konsistenzkonflikt)}
+Durch Stakeholder ohne technisches Wissen wurden wiederholt vage Anforderungen an die Performance gestellt, wie etwa
+\enquote{die Anwendung muss schnell sein}.
+Anstatt diese Anforderungen sofort detaillierter zu beschreiben, wurden diese stattdessen in den Katalog übernommen, unter
+der Annahme, dass andere Beteiligte sich um das detailliertere Beschreiben kümmern würden.
+Dadurch kam es in der ersten Version des Anforderungskatalogs zu Konsistenzkonflikten.
+Behoben werden konnten diese durch ein Anforderungsreview unter spezieller Beteiligung der Entwickler, welche aufgrund des
+tieferen technischen Wissens Empfehlungen für die detaillierte Beschreibung der Anforderungen geben konnten.
 
-\paragraph{Gezielte Werbung}
-Um den Gewinn der Anwendung zu erhöhen hat die Unternehmensführung des entwickelnden Unternehmens entschieden in der PWA
-optionale Cookies für gezielte Werbung zu verwenden.
-Dies stieß bei den Kunden/Nutzern auf Ablehnung.
-Da bei diesem Fall die Eindeutigkeit einer Lösung wichtig war und auch in diesem Fall mit einer langen Lebensdauer des
-Ergebnisses gerechnet wurde, kam es zwischen den beteiligten zu der Einigung, dass Werbung nur bei Nutzern mit normalen
-Accounts geschaltet wird.
+\paragraph{Gezielte Werbung (Anforderungskonflikt)}
+Ein weiterer Konflikt drehte sich um die Frage, ob in der Anwendung Werbung gezeigt werden sollte oder nicht.
+Entstanden ist dieser, da die Geschäftsleitung des entwickelnden Unternehmens ihren Plan Werbung in der Applikation zu zeigen
+vor den übrigen Stakeholdern geheim gehalten hat.
+Dadurch kam es zu einem Anforderungskonflikt, da die Nutzer und Kunden explizit eine werbefreie Anwendung wünschten.
+Nach einer Analyse des Konflikts zeigte sich, dass es sich sowohl um einen Sachkonflikt als auch einen Interessenkonflikt
+handelt.
+Die Einordnung als Sachkonflikt erfolgte, da den übrigen Stakeholdern durch die Geschäftsleitung bewusst Informationen
+vorenthalten wurden.
+Die Einordnung als Interessenskonflikt erfolgte, da die verschiedenen Anforderungen durch die subjektiven Interessen der
+beteiligten Stakeholder geprägt waren.
+Für diesen Konflikt war es, um die Rentabilität der Anwendung für das Unternehmen zu gewährleisten, notwendig eine eindeutige
+Lösung zu finden.
+Außerdem war zu beachten, dass das Ergebnis eine lange Lebensdauer haben würde.
+Deshalb wurde unter Beachtung des Sachkonfliktaspekts und unter Vernachlässigung des Interessenkonfliktaspekts entschieden
+eine Einigung zwischen den Stakeholdern anzustreben.
+Erreicht werden konnte diese durch das Zugeständnis der Geschäftsleitung, dass die Werbung nur für Profile, welche das Standardabonnement
+abgeschlossen haben gezeigt wird, was von den übrigen Stakeholdern akzeptiert wurde.
+
+\paragraph{Erheben von Daten (Anforderungskonflikt)}
+Durch das steigende Bewusstsein für die Privatsphäre und die Sicherheit der eigenen Daten, wünschten sich Nutzer und Kunden
+eine Anwendung, welche abgesehen von den zur Registrierung erforderlichen Daten keine weiteren erhebt.
+Da zur zukünftigen Weiterentwicklung der Anwendung von den Entwicklern und der Geschäftsleitung Nutzungsdaten gefordert wurden,
+kam es hier zu einem Konflikt.
+Zusätzlich entstand durch nationale und internationale Gesetze die Notwendigkeit, den Nutzer zu lokalisieren um potenziell
+verbotene Inhalte sperren zu können.
+Eine Analyse des Konflikts ergab die Einteilung als Interessenkonflikt und als struktureller Konflikt.
+Die Einteilung als Interessenkonflikt erfolgte erneut, da die Anforderungen durch die subjektiven Interessen der Stakeholder
+geprägt waren.
+Die Beteiligung (inter-) nationaler Behörden führte zur Einteilung als struktureller Konflikt, da diese gegenüber den
+Nutzern und der entwickelnden Organisation über eine höhere Macht und Autorität verfügen.
+An diesem Konflikt war eine große Anzahl an Stakeholdern beteiligt.
+Außerdem war er geprägt von einer hohen Kritikalität des Sachverhaltes.
+Ebenfalls gab es zwischen den beteiligten Stakeholdern ein starkes Machtgefälle.
+Da durch den Konflikt sowohl die Interessensebene als auch die Strukturebene betroffen war und eine Abstimmung kein zufriedenstellendes
+Ergebnis erbrachte, wurde entschieden diesen Konflikt nach dem Ober sticht unter Prinzip zu lösen.
+Ergebnis dieser Lösung war, dass durch die Geschäftsleitung der Organisation entschieden wurde, dass nicht nur die für die
+Einhaltung (inter-)nationaler Gesetze nötigen Daten erhoben werden, sondern zusätzlich auch die von den Entwicklern geforderten
+Nutzungsdaten.
