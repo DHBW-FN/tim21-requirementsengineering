@@ -1,19 +1,78 @@
 \subsection{Erstellung des Requirements-Katalog}\label{subsec:requirements}
-Unter Anwendung der in~\nameref{subsec:anforderungsermittlung} beschriebenen Methoden für die Erhebung von Anforderungen
-wurde anschließend ein Requirements-Katalog erstellt.
-Besondere Bedeutung kamen dabei den Kreativtechniken und den dokumenten- und systembasierten Techniken zu, da diese ohne
-Beteiligung verschiedener Stakeholder auskommen.
-Die erhobenen Anforderungen wurden anschließend mithilfe der in~\nameref{subsec:techniken-zur-validierung-und-qualitatssicherung}
-erläuterten Qualitätskriterien und deren Prüfungstechniken auf ihre Qualität und Validität untersucht.
-Das führte zu einem finalen Ergebnis welches aus Gründen der Übersichtlichkeit im Anhang zu finden ist
-(siehe~\nameref{subsec:requirements_catalouge}).
-Zusätzlich ein paar kurze Nutzungsinformationen für den Katalog.
-Da das in \textbf{ReqView} zur Erstellung des Katalogs verwendete Template in Englisch verfasst ist, wurde aus Gründen
-der Konsistenz der gesamte Katalog in Englisch verfasst.
-Die Anforderungen sind außerdem nicht nach Priorität oder den Kano-Kategorien sortiert, sondern folgen einer durch das
-Template vorgegebenen Hierarchie.
-Die Unterscheidung zwischen Kann- und Muss-Anforderungen erfolgt implizit anhand der Einordnung in die Kano-Kategorien und
-ist wie folgt aufgeteilt:
+Die Erstellung des Anforderungskatalogs erfolgte nach der in~\nameref{sec:vorgehensweise} beschriebenen Vorgehensweise.
+
+Erster Schritt war dabei die Erhebung der Anforderungen mithilfe der in~\nameref{subsec:anforderungsermittlung} beschriebenen
+Erhebungsmethoden.
+Die theoretische Natur und das damit verbundene nicht Existieren eines Großteils der Stakeholder führte dabei dazu, dass
+Befragungstechniken nur eine begrenzte Nützlichkeit aufwiesen.
+Daher wurden überwiegend Kreativtechniken sowie dokumenten- und systembasierte Techniken angewandt.
+Erste angewandte Technik war dabei das Brainstorming (Kreativtechnik).
+Dadurch konnte eine erste grobe Liste von hauptsächlich funktionalen Anforderungen erstellt werden.
+Ergänzt wurden diese durch das Anwenden eines Perspektivwechsels (Kreativtechnik),
+bei dem sich in die Rolle der nicht existierenden Stakeholder hineinversetzt wurde,
+um die Anwendung so aus deren Sicht zu betrachten.
+
+Da auch hierbei überwiegend funktionale Anforderungen aufkamen, wurde für die Erhebung der nicht-funktionalen Anforderungen
+auf die dokumenten- und systembasierte Techniken zurückgegriffen.
+Dazu wurden verwandte Anwendungen, in diesem Fall \textit{Prime Video} und \textit{Netflix}, sowohl auf ihre Funktionen als auch
+soweit möglich auf deren technische Voraussetzungen untersucht.
+
+Das Ergebnis dieser Untersuchungen war eine umfangreiche Liste von funktionalen und nicht-funktionalen Anforderungen.
+Diese Liste wurde anschließend nach den in~\nameref{subsec:techniken-zur-validierung-und-qualitatssicherung} beschriebenen
+Methoden systematisch auf ihre Qualität und Validität untersucht.
+Anschließend erfolgte die Kategorisierung nach den in~\nameref{subsec:kano-modell} beschriebenen Kano-Kategorien.
+Darauf basiert die Einordnung der Anforderungen in \textbf{Kann-Anforderungen} und \textbf{Muss-Anforderungen}
+(siehe~\nameref{subsubsec:structure}).
+
+Letzter Schritt war die Identifizierung und fachgerechte Lösung von Anforderungskonflikten wie es in~\nameref{subsubsec:conflicts}
+näher beschrieben ist.
+Ergebnis dieses Vorgehens war ein Requirements-Katalog, welcher, aus Gründen der Übersichtlichkeit dieser Arbeit, im Anhang
+zu finden ist (siehe~\nameref{subsec:requirements_catalouge}).
+Die Struktur des Katalogs wird zusätzlich in~\nameref{subsubsec:structure} näher beschrieben um den Umgang mit diesem zu
+erleichtern.
+
+\subsubsection{Struktur des Anforderungskatalogs}\label{subsubsec:structure}
+Um den Umgang mit dem im Anhang befindlichen Anforderungskatalogs zu vereinfachen, wird hier kurz die Struktur erläutert.
+Zunächst sei gesagt, dass da das in \textbf{ReqView} zur Erstellung des Katalogs verwendete Template in Englisch verfasst ist,
+aus Gründen der Konsistenz der gesamte Katalog in Englisch verfasst wurde.
+Der Katalog hat die Form einer Tabelle mit den folgenden Spalten:
+\begin{itemize}
+    \item \textbf{Type}
+    \item \textbf{Description}
+    \item \textbf{Source}
+    \item \textbf{Priority}
+    \item \textbf{Verification Method}
+    \item \textbf{Kano-Model Category}
+\end{itemize}
+
+\paragraph{Type} beschreibt um was für eine Art Element es sich handelt.
+Die verwendeten Typen sind:
+\begin{itemize}
+    \item \textbf{Section:} Ein Element das zur Strukturierung des Katalogs dient
+    \item \textbf{Information:} Ein Element, das Informationen über die Anwendung oder relevante äußere Faktoren/Entitäten
+    enthält
+    \item \textbf{Functional Requirement:} Eine funktionale Anforderung
+    \item \textbf{Non-Functional Requirement:} Eine nicht-funktionale Anforderung
+\end{itemize}
+
+\paragraph{Description} enthält eine Nummer, einen Titel und eine kurze aber genaue Beschreibung des Elements.
+Die Nummer wird verwendet, um die Elemente zu strukturieren und zu sortieren und dient außerdem dem Aufzeigen einer Hierarchie
+zwischen den Elementen.
+
+\paragraph{Source} enthält den/die Stakeholder der/die diese Anforderung erhoben haben.
+Daher wird dieses Attribut nicht bei den Elementen vom Typ \textbf{Section} und \textbf{Information} verwendet.
+
+\paragraph{Priority} priorisiert die Anforderung nach der Wichtigkeit für die Anwendung in \textbf{hoch}, \textbf{mittel}
+und \textbf{niedrig} und gibt damit eine grobe Auskunft in welcher Reihenfolge die Anforderungen umgesetzt werden.
+Auch dieses Attribut wird nicht bei den Elementen vom Typ \textbf{Section} und \textbf{Information} verwendet.
+
+\paragraph{Verification Method} beschreibt die Methode, die verwendet wird um eine erfolgreiche Umsetzung der Anforderung
+zu überprüfen.
+Wird nur bei den Elementen vom Typ \textbf{Functional Requirement} und \textbf{Non-Functional Requirement} verwendet.
+
+\paragraph{Kano-Model Category} dient der Kategorisierung der Anforderung nach den fünf Kano-Kategorien.
+Diese Kategorisierung führt zudem zur Trennung der Anforderungen in \textbf{Muss-Anforderungen} und \textbf{Kann-Anforderungen},
+die wie folgt definiert ist:
 
 \begin{itemize}
     \item \textbf{Muss-Anforderungen:} Basisfaktoren (Threshold), Leistungsfaktoren (Performance)
@@ -21,8 +80,9 @@ ist wie folgt aufgeteilt:
     Umgekehrte Qualitäten (Reverse)
 \end{itemize}
 
-Es handelt sich des Weiteren um die finale Version des Katalogs, das heißt Konflikte zwischen Anforderungen wurden bereits
-gelöst (siehe~\nameref{subsubsec:conflicts}) und sind damit nicht mehr ersichtlich.
+Wichtig ist zusätzlich, dass es sich bei dem vorliegendenKatalog um die finale Version handelt, das heißt eventuelle Konflikte
+zwischen Anforderungen wurden bereits identifiziert und gelöst (siehe~\nameref{subsubsec:conflicts}) und sind damit nicht
+mehr ersichtlich.
 
 \subsubsection{Konflikte zwischen Anforderungen}\label{subsubsec:conflicts}
 Während der Erstellung des Requirements-Katalogs kam es zu einigen Konflikten zwischen Anforderungen, deren Lösungen im Folgenden
