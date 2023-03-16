@@ -24,6 +24,7 @@
 \usepackage[T1]{fontenc}													                                    % Umlaute auch richtig ausgeben
 \usepackage{newtxtext,newtxmath}                                                      % Font = Times New Roman
 \usepackage{hyperref}
+\usepackage{xr-hyper}
 \usepackage[nottoc]{tocbibind}
 \usepackage{fancyhdr}
 \usepackage{setspace}
@@ -46,6 +47,8 @@
 \usepackage[nohyperlinks, printonlyused, withpage]{acronym}                           % Abkürzungen
 \usepackage{dirtree}                                                                  % Ordnerstruktur (z.B. für Anhang)
 \usepackage{pdfpages}                                                                 % PDFs einbinden
+\usepackage{float}                                                                    % Abbildungen und Tabellen in Text einbinden
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                      Angaben zur Arbeit                      %%%
@@ -98,6 +101,7 @@
 \addbibresource{literatur/Norm.bib}
 \addbibresource{literatur/Philipp.bib}
 \addbibresource{literatur/tobias.bib}
+\addbibresource{literatur/Noel.bib}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% PDF-Einstellungen %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -171,7 +175,12 @@
   \include{chapter/Qualitaetssicherung1}
   \include{chapter/Anforderungskonflikte1}
   \include{chapter/Stakeholderanalyse1}
+  \include{chapter/EPK}
+  \include{chapter/Kano_Model}
   \include{chapter/Stakeholderanalyse2}
+  \include{chapter/Requirements}
+
+
 
   %%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%
   \include{pages/literaturverzeichnis}
@@ -181,7 +190,7 @@
   \renewcommand{\thetable}{\Alph{section}.\arabic{table}}
   \renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
   \renewcommand{\thelstlisting}{\Alph{section}.\arabic{lstlisting}}
-  \pagenumbering{Alph}
+  \pagenumbering{arabic}
 
   \include{pages/anhang}
 \end{document}
